@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Ysabeau+Office&display=swap");
+
+:root {
+  font-family: "Ysabeau Office", sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  box-sizing: border-box;
+  background-color: #f8f8f8;
+}
+
+a {
+  text-align: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+button {
+  cursor: pointer;
+}

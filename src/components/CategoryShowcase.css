@@ -1,0 +1,40 @@
+.showcase {
+  position: absolute;
+  top: 90%;
+  z-index: 10;
+  left: 0;
+  margin-top: 1rem;
+
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  gap: 10px;
+  color: rgb(235, 233, 223);
+  min-height: 10rem;
+  font-weight: bolder;
+}
+.showcasecard {
+  width: 100%;
+  height: 10rem;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.electronics {
+  background-image: url("../assets/electronics.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.home {
+  background-image: url("../assets/homematerials.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.clothing {
+  background-image: url("../assets/clothing.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}

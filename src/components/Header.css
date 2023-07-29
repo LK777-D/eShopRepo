@@ -1,0 +1,93 @@
+.header {
+  position: relative;
+  margin-top: 0.5rem;
+  width: 100%;
+  min-height: 50vh;
+}
+
+.headerimg {
+  min-height: 50vh;
+  width: 100%;
+  background-image: url("../assets/product-drop.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: left;
+}
+.htext {
+  text-align: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #837373;
+  width: 100%;
+}
+.htext h1 {
+  margin-left: 1rem;
+}
+.htext h3 {
+  /* color: white; */
+  font-weight: bolder;
+  font-size: 1.2rem;
+}
+.htext h4,
+.htext .shopnow {
+  margin-left: 0;
+}
+
+.htext .shopnow {
+  font-family: inherit;
+  display: inline-block;
+  width: 8em;
+  height: 3em;
+  line-height: 2.5em;
+  overflow: hidden;
+  margin: 20px;
+  font-size: 17px;
+  z-index: 1;
+  color: white;
+  font-weight: bolder;
+  font-size: 1.15rem;
+  border: 2px solid #837373;
+  border-radius: 6px;
+  position: relative;
+  background: none;
+}
+
+.htext .shopnow::before {
+  position: absolute;
+  content: "";
+  background: black;
+  opacity: 0.7;
+  width: 150px;
+  height: 200px;
+  z-index: -1;
+  border-radius: 50%;
+}
+
+.htext .shopnow:hover {
+  color: white;
+}
+
+.htext .shopnow:before {
+  top: 100%;
+  left: 100%;
+  transition: 0.3s all;
+}
+
+.htext .shopnow:hover::before {
+  top: -90px;
+  left: -5px;
+}
+
+@media (min-width: 601px) {
+  .headerimg {
+    height: 70vh;
+    display: flex;
+    background-position: top;
+    text-align: center;
+    justify-content: center;
+  }
+  .htext .shopnow {
+    color: #837373;
+  }
+}

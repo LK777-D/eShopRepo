@@ -1,0 +1,47 @@
+.moreless button {
+  background: none;
+  border: none;
+  color: rgb(28, 155, 197);
+  font-size: 0.8rem;
+  margin-left: 1rem;
+}
+.showmore {
+  margin-bottom: 1rem;
+}
+.centered {
+  text-align: center;
+  color: rgb(12, 101, 131);
+  font-weight: bolder;
+}
+
+/*  */
+.allproducts {
+  padding: 0.7rem;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(2, 1fr);
+  text-align: center;
+}
+
+@media (min-width: 1200px) {
+  .allproducts {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+@media (min-width: 1000px) and (max-width: 1200px) {
+  .allproducts {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+@media (min-width: 800px) and (max-width: 1000px) {
+  .allproducts {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (min-width: 600px) and (max-width: 800px) {
+  .allproducts {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

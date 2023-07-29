@@ -1,0 +1,18 @@
+.orderhelper {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 1.4rem;
+}
+.orderhelper h2 {
+  color: rgb(18, 103, 129);
+}
+.step {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.stepicon {
+  font-size: 2.5rem;
+  color: rgb(18, 103, 129);
+}

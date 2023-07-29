@@ -1,0 +1,88 @@
+.detailscard {
+  background-color: rgb(248, 248, 248);
+  min-height: 15rem;
+  width: 100%;
+}
+.detailscard a {
+  text-decoration: none;
+  color: black;
+  font-weight: bolder;
+  width: 100%;
+  height: 100%;
+}
+
+.cardcontent {
+  max-width: 100%;
+  max-height: 100%;
+  /* padding: 1.2rem; */
+  font-family: inherit;
+}
+.imgcont {
+  width: 90%;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 1rem;
+}
+.imgcont img {
+  width: 100%;
+}
+
+.productinfocont {
+  padding: 1.2rem;
+  text-align: center;
+}
+.buttons {
+  padding: 1rem;
+}
+.priceinfo {
+  display: flex;
+  gap: 0.3rem;
+  justify-content: center;
+}
+.productinfo h2 {
+  font-weight: bolder;
+  font-size: 2.2rem;
+  color: rgb(43, 42, 42);
+}
+
+.buttons {
+  display: flex;
+  gap: 1rem;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+.buttons button {
+  padding: 1rem 2.5rem;
+  background: none;
+  border: 1px solid black;
+  border-radius: 25px;
+  color: black;
+  font-family: inherit;
+  font-weight: bolder;
+}
+.buttons button:hover {
+  color: white;
+  background-color: black;
+}
+
+.buttons button:hover a {
+  color: white;
+  background-color: black;
+}
+.bold {
+  font-weight: bolder;
+}
+.percent {
+  color: red;
+}
+
+@media (min-width: 600px) {
+  .detailscard {
+    width: 50%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }
+}

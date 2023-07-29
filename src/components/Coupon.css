@@ -1,0 +1,31 @@
+.coupon {
+  position: relative;
+  margin-bottom: 2rem;
+}
+.coupon span {
+  background-color: rgb(58, 148, 179);
+  padding: 0.5rem 1rem;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  animation: couponappear 0.3s forwards;
+  color: white;
+  font-weight: bolder;
+}
+
+.couponbtn {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+.coupon button {
+  background: none;
+  border: 1px solid rgb(28, 155, 197);
+  color: rgb(28, 155, 197);
+  min-width: 20rem;
+  min-height: 2.5rem;
+  border-radius: 20px;
+  font-weight: bolder;
+}
+.coupon button:hover {
+  background-color: rgb(28, 155, 197);
+  color: white;
+}

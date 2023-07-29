@@ -1,0 +1,72 @@
+.shopcart {
+  background-color: #ebe9e9;
+  position: fixed;
+  top: 11.2%;
+  right: 0;
+  width: 19rem;
+  z-index: 100000000000000000000;
+  max-height: 80vh;
+  scroll-behavior: smooth;
+  /* height: auto; */
+  /* overflow: scroll; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: flex-start; */
+  gap: 2rem;
+  padding: 0 0.5rem;
+  font-family: inherit;
+  overflow: scroll;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+.carttext {
+  height: 2rem;
+  display: flex;
+  color: rgb(82, 77, 77);
+}
+.close {
+  background: none;
+  border: none;
+  position: absolute;
+  top: 3%;
+  left: 1%;
+  color: white;
+  font-weight: bolder;
+  font-size: 1.5rem;
+}
+
+.cartbuttons {
+  display: flex;
+  gap: 10px;
+  padding: 0.7rem 0;
+}
+.cartbuttons button {
+  border: 1px solid rgb(82, 77, 77);
+  background: none;
+  color: #3b3939;
+  font-weight: bolder;
+  min-width: 80px;
+  min-height: 30px;
+  font-size: 15px;
+  font-family: inherit;
+}
+.cartbuttons button:hover {
+  color: #eee;
+  background: rgb(43, 42, 42);
+}
+.total span {
+  font-weight: bolder;
+}
+.animate {
+  animation: cartappear 0.3s forwards;
+}
+@keyframes cartappear {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}

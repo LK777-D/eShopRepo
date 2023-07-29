@@ -1,0 +1,29 @@
+.ad {
+  width: 100%;
+  text-align: center;
+  color: white;
+  min-height: 15rem;
+}
+
+.adwrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url("../assets/ad.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 92%;
+  margin: auto;
+  height: auto;
+  border-radius: 10px;
+  min-height: 15rem;
+}
+.adwrapper span {
+  background-color: white;
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+  color: rgb(37, 122, 150);
+  font-weight: bolder;
+}

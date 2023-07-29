@@ -1,0 +1,84 @@
+.card {
+  position: relative;
+  min-width: 10rem;
+  border: 1px solid lightgrey;
+
+  /* background-color: white; */
+  /* margin-top: 1rem; */
+  /* text-align: center; */
+  /* border-radius: 10px; */
+  padding: 0.5rem;
+  background-color: #eee;
+  border-radius: 5px;
+}
+
+.cardcontent {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.imagecontainer {
+  height: 100%;
+  width: 100%;
+
+  text-align: center;
+}
+.imagecontainer img {
+  /* height: 100%; */
+  max-width: 100%;
+  transition: transofrm 0.2s;
+}
+.imagecontainer img:hover {
+  transform: scale(1.03);
+}
+
+.price {
+  font-weight: bolder;
+  color: rgb(17, 212, 226);
+  font-size: 1.2rem;
+}
+.prodbtn {
+  background: none;
+  border: none;
+  font-weight: bolder;
+  border: 1px solid rgb(28, 155, 197);
+  min-height: 1.8rem;
+  min-width: 5rem;
+  border-radius: 5px;
+  color: rgb(28, 155, 197);
+}
+.prodbtn:hover {
+  background-color: rgb(28, 155, 197);
+  color: white;
+}
+.pricebtn {
+  display: flex;
+  justify-content: flex-start;
+  gap: 3px;
+}
+
+.carousel2 {
+  width: 100;
+  height: 100%;
+}
+
+.seperator {
+  /* border-bottom: 0.1px dotted rgb(128, 128, 128, 0.7); */
+  height: 1.5px;
+  margin: 2rem 0;
+  background-color: rgb(214, 210, 210);
+}
+
+.categorycount {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  color: rgb(173, 169, 169);
+  font-weight: 700;
+}
+.sale {
+  font-size: 12.5px;
+  color: red;
+}
