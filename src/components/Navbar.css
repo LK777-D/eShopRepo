@@ -113,6 +113,8 @@
   gap: 1rem;
   animation: menuappear 0.3s forwards;
   overflow: scroll;
+  scroll-behavior: smooth;
+  flex: 1;
 }
 @keyframes menuappear {
   from {
@@ -132,7 +134,7 @@
   text-align: center;
   background-color: lightgrey;
   height: 15vh;
-  padding: 1rem;
+  /* padding: 0.1rem; */
 }
 
 .menuheading button {
