@@ -7,7 +7,7 @@ const Header = () => {
       <div className="headerimg"></div>
       <div className="htext">
         <h1> All Products </h1>
-        <h3>Delivered Worldwide In A Week</h3>
+        <h3>Delivered Worldwide In A Week.</h3>
         <Link
           to="prodsall"
           className="shopnow"
