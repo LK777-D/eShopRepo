@@ -3,9 +3,8 @@ import "./CategoryShowcase.css";
 const CategoryShowCase = () => {
   return (
     <div className="showcase">
-      <div className="showcasecard electronics"></div>
-      <div className="showcasecard clothing"></div>
-      <div className="showcasecard home"></div>
+      <div className="showcasecard electronics">Video Games and Consoles</div>
+      <div className="showcasecard clothing">Clothing and Accessories</div>
     </div>
   );
 };

@@ -18,6 +18,12 @@
   height: 10rem;
   border-radius: 5px;
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bolder;
+  font-size: 1.2rem;
+  color: #e4e4e4;
 }
 
 .electronics {
