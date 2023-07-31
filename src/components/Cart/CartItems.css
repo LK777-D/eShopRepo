@@ -11,6 +11,7 @@
   display: flex;
   gap: 5px;
   align-items: center;
+  box-shadow: 2px 2px 10px rgb(156, 153, 153);
 }
 
 .infoimgwrapper button {
@@ -22,7 +23,7 @@
 }
 
 .cartimage {
-  width: 35%;
+  min-width: 35%;
   height: 80%;
 }
 
