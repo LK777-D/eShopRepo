@@ -1,5 +1,5 @@
 import "./ProductsLargeList.css";
-import ProductCard from "./ProductCard";
+
 /* eslint-disable react/prop-types */
 
 const ProductsLargeList = (props) => {

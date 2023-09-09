@@ -25,19 +25,18 @@ function App() {
   };
   return (
     <>
-      <nav className="topnav">
-        <Navbar
-          onOpen={openCartHandler}
-          amount={amount}
-          scale={scaleAfterClick}
-        />
-        <SecondaryNav searchData={searchData} />
-      </nav>
-      <section className="discount">
+      <Navbar
+        onOpen={openCartHandler}
+        amount={amount}
+        scale={scaleAfterClick}
+      />
+      {/* <SecondaryNav searchData={searchData} /> */}
+
+      {/* <section className="discount">
         <p>
           Get <span>50% Discount</span> on Your First Order
         </p>
-      </section>
+      </section> */}
       <Routes>
         <Route
           path="/"

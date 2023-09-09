@@ -4,7 +4,7 @@
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  min-height: 2.3rem;
+  min-height: 4.5rem;
 }
 .nav a {
   text-decoration: none;
@@ -22,11 +22,11 @@
   font-family: inherit;
 
   /* height: 2rem;
-  width: 50%;
-  background-image: url("../assets/gslogo.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover; */
+    width: 50%;
+    background-image: url("../assets/gslogo.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; */
 }
 
 .menu {
@@ -86,8 +86,15 @@
 
 .lgmenu {
   display: flex;
-  gap: 5px;
+  gap: 10px;
   display: none;
+}
+.lgmenu a {
+  color: rgb(126, 123, 123);
+  transition: color 0.5s ease-out;
+}
+.lgmenu a:hover {
+  color: rgb(15, 15, 15);
 }
 
 .lgmenulink {
@@ -164,9 +171,12 @@
 /* media */
 @media (min-width: 601px) {
   .nav {
-    min-height: 3rem;
+    min-height: 4.5rem;
     justify-content: space-between;
     text-align: center;
+  }
+  .mainlogo {
+    font-size: 1.9rem;
   }
   .search {
     display: flex;

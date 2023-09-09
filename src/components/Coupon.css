@@ -1,15 +1,16 @@
 .coupon {
   position: relative;
-  margin-bottom: 2rem;
+  margin: 3.8rem 0;
 }
 .coupon span {
-  background-color: rgb(58, 148, 179);
+  background-color: rgb(40, 40, 40);
   padding: 0.5rem 1rem;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
-  animation: couponappear 0.3s forwards;
+
   color: white;
   font-weight: bolder;
+  animation: couponSlide 1.5s ease-in-out;
 }
 
 .couponbtn {
@@ -18,14 +19,31 @@
 }
 .coupon button {
   background: none;
-  border: 1px solid rgb(28, 155, 197);
-  color: rgb(28, 155, 197);
+  border: 1px solid rgb(40, 40, 40);
+  color: rgb(40, 40, 40);
   min-width: 20rem;
   min-height: 2.5rem;
-  border-radius: 20px;
+  border-radius: 10px;
   font-weight: bolder;
+  transition: background-color 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 .coupon button:hover {
-  background-color: rgb(28, 155, 197);
+  background-color: rgb(40, 40, 40);
   color: white;
+}
+@keyframes couponSlide {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+@media (min-width: 600px) {
+  .coupon {
+    text-align: center;
+  }
+  .coupon span {
+    border-radius: 10px;
+  }
 }

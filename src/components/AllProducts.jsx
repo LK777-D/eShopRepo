@@ -22,28 +22,32 @@ const AllProducts = (props) => {
   // };
 
   return (
-    <>
-      <h2 className="centered">All Products</h2>
-      <div className="allproducts" id="prodsall">
+    <section className="section">
+      <h2 className="prodsheading font4">All Products</h2>
+      <div className="productsdivide"></div>
+      <div className="productscont" id="prodsall">
         {newItems.map((product) => (
-          <ProductCard
-            product={product}
-            onAdd={props.onAdd}
-            key={product.id}
-            image={product.images}
-            title={product.title}
-            description={product.description}
-            price={product.price}
-            // rating={product.rating}
-            category={product.category}
-            discountPercentage={product.discountPercentage}
-            rating={product.rating}
-          />
+          <div key={product.id}>
+            <ProductCard
+              to={`/productdetail/${product.id}`}
+              product={product}
+              onAdd={props.onAdd}
+              key={product.id}
+              image={product.images[0]}
+              title={product.title}
+              description={product.description}
+              price={product.price}
+              // rating={product.rating}
+              category={product.category}
+              discountPercentage={product.discountPercentage}
+              rating={product.rating}
+            />
+          </div>
         ))}
       </div>
-      <div className="showmore">
+      <div className="showmore ">
         {shownItems < props.prods.length ? (
-          <div className="moreless">
+          <div className="moreless font1">
             <button onClick={showMoreHandler}>Show More Products...</button>
           </div>
         ) : (
@@ -52,7 +56,7 @@ const AllProducts = (props) => {
           </div>
         )}
       </div>
-    </>
+    </section>
   );
 };
 

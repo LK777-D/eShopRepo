@@ -1,40 +1,35 @@
 import "./ProductCard.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
-import Carousel from "./Carousel";
+
 import Rating from "../UI/Rating";
+import { Link } from "react-router-dom";
 /* eslint-disable react/prop-types */
 
 const ProductCard = (props) => {
   return (
     <div className="card">
-      <div className="cardcontent">
-        <div className="imagecontainer">
-          <Carousel images={props.image} className="carousel2" />
-        </div>
-
-        <div className="categorycount">
-          {/* <span>
-            {props.category.charAt(0).toUpperCase() + props.category.slice(1)}
-          </span> */}
-
-          <h4>{props.title}</h4>
-        </div>
-
-        <div className="pricebtn">
-          <span className="price">${props.price}</span>
-          <span className="sale">-{props.discountPercentage}%</span>
+      <div className="imagecontainer">
+        <img src={props.image} />
+      </div>
+      <Link to={props.to}>
+        <div className="textinfo">
+          <span className="font1 title">{props.title}</span>
           <span>
             <Rating rating={props.rating} />
           </span>
-          <div>
-            <br />
+          <div className="pricesale">
+            <span className="price">${props.price}</span>
+            <span className="sale">-{props.discountPercentage}%</span>
           </div>
         </div>
-        <button className="prodbtn" onClick={() => props.onAdd(props.product)}>
-          Add To Cart <FontAwesomeIcon icon={faShoppingCart} />
-        </button>
-      </div>
+      </Link>
+      <button
+        className="prodbtn font1"
+        onClick={() => props.onAdd(props.product)}
+      >
+        Add To Cart <FontAwesomeIcon icon={faShoppingCart} />
+      </button>
     </div>
   );
 };

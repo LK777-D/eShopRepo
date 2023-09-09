@@ -54,8 +54,8 @@ const Navbar = (props) => {
         </div>
       )}
       <div className="brandname">
-        <Link to="/" className="company">
-          Global Shop
+        <Link to="/" className="company font4 mainlogo">
+          <span className="mainlogo">TechTreasures</span>
         </Link>
       </div>
       <div className="cart">
@@ -74,15 +74,18 @@ const Navbar = (props) => {
         </div>
       </div>
 
-      <div className="lgmenu">
+      <div className="lgmenu font2">
         <NavLink to="/" className="lgmenulink">
           Home
         </NavLink>
         <NavLink className="lgmenulink" to="/productdetail/17">
-          Big Sales
+          Products
         </NavLink>
         <NavLink className="lgmenulink" to="/productdetail/14">
-          Top Products
+          Bestsellers
+        </NavLink>
+        <NavLink className="lgmenulink" to="/productdetail/14">
+          Contact
         </NavLink>
       </div>
     </nav>

@@ -11,7 +11,6 @@ const Home = (props) => {
     <>
       <header className="mainheader">
         <Header />
-        <CategoryShowCase className="showcaseheader" />
       </header>
       <div className="seperator"></div>
       <section>

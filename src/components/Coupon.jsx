@@ -19,14 +19,21 @@ const Coupon = () => {
   };
 
   return (
-    <div className="coupon">
-      <h3 className="centered">Use Our Coupon To Shop For The Best Price</h3>
+    <>
+      <div className="coupon">
+        <h3 className="centered font4">
+          Use Our Coupon To Shop For The Best Price
+        </h3>
 
-      <div className="couponbtn">
-        <button onClick={couponGeneratorHandler}>Generate Coupon</button>
+        <div className="couponbtn ">
+          <button className="font4" onClick={couponGeneratorHandler}>
+            Generate Coupon
+          </button>
+        </div>
+        {coupon.length > 1 && <span>Your Coupon : {coupon}</span>}
       </div>
-      {coupon.length > 1 && <span>Your Coupon : {coupon}</span>}
-    </div>
+      <div className="productsdivide"></div>
+    </>
   );
 };
 

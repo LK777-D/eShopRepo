@@ -3,20 +3,10 @@ import { Link } from "react-scroll";
 
 const Header = () => {
   return (
-    <div className="header">
-      <div className="headerimg"></div>
-      <div className="htext">
-        <h1> All Products </h1>
-        <h3>Delivered Worldwide In A Week.</h3>
-        <Link
-          to="prodsall"
-          className="shopnow"
-          smooth={true}
-          offset={10}
-          duration={300}
-        >
-          Shop Now
-        </Link>
+    <div className="header headerimg">
+      <div className="heading ">
+        <h3 className="font4 ">Welcome to TechTreasures</h3>
+        <h4 className="font4 ">Your Ultimate Shopping Destination</h4>
       </div>
     </div>
   );
