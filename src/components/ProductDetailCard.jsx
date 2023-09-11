@@ -4,18 +4,18 @@ import { Link } from "react-router-dom";
 
 const ProductDetailCard = (props) => {
   return (
-    <div className="detailscard">
-      <div className="cardcontent">
+    <div className="detailscard font4">
+      <div className="cardcontent ">
+        <h2>{props.title}</h2>
         <div className="imgcont">
           <img src={props.images} />
         </div>
         <div className="productinfocont">
           <div className="productinfo">
-            <h2>{props.title}</h2>
             <span>
               <span className="bold">Brand :</span> {props.brand}
             </span>
-            <p>{props.description}</p>
+            <p className="font5">{props.description}</p>
           </div>
           <div className="priceinfo">
             <span>

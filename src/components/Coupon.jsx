@@ -26,11 +26,16 @@ const Coupon = () => {
         </h3>
 
         <div className="couponbtn ">
-          <button className="font4" onClick={couponGeneratorHandler}>
+          <button
+            className="font5 borderhover "
+            onClick={couponGeneratorHandler}
+          >
             Generate Coupon
           </button>
         </div>
-        {coupon.length > 1 && <span>Your Coupon : {coupon}</span>}
+        <div className="generatedcoupon">
+          {coupon.length > 1 && <span>Your Coupon : {coupon}</span>}
+        </div>
       </div>
       <div className="productsdivide"></div>
     </>

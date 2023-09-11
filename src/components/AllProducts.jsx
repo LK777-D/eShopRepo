@@ -3,7 +3,7 @@ import "./AllProducts.css";
 import { useState } from "react";
 import ProductCard from "./ProductCard";
 
-const initialShownItems = 10;
+const initialShownItems = 16;
 const nextLoad = 4;
 
 const AllProducts = (props) => {

@@ -55,7 +55,7 @@ const Navbar = (props) => {
       )}
       <div className="brandname">
         <Link to="/" className="company font4 mainlogo">
-          <span className="mainlogo">TechTreasures</span>
+          <span className="mainlogo">MultiMart</span>
         </Link>
       </div>
       <div className="cart">

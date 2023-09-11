@@ -1,29 +1,128 @@
 .ad {
-  width: 100%;
-  text-align: center;
-  color: white;
-  min-height: 15rem;
-}
-
-.adwrapper {
+  max-width: 23.5rem;
+  margin: auto;
+  min-height: 20rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-image: url("../assets/ad.png");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  width: 92%;
-  margin: auto;
-  height: auto;
-  border-radius: 10px;
-  min-height: 15rem;
+  gap: 0.4rem;
 }
-.adwrapper span {
-  background-color: white;
-  border-radius: 20px;
-  padding: 0.5rem 1rem;
-  color: rgb(37, 122, 150);
-  font-weight: bolder;
+.mergedsections {
+  display: flex;
+  gap: 0.4rem;
+  width: 100%;
+  height: 6.5rem;
+}
+.mergedsections div {
+  width: 100%;
+  height: 100%;
+}
+.mergedsections img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.decoration {
+  display: none;
+}
+
+.electronics {
+  position: relative;
+  width: 100%;
+  height: 13.5rem;
+}
+.electronics img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.electronics span {
+  position: absolute;
+  bottom: 0;
+  left: 2%;
+  color: white;
+  font-size: 1.8rem;
+}
+.parfume,
+.skincare {
+  position: relative;
+}
+
+.parfume span,
+.skincare span {
+  position: absolute;
+  bottom: 0;
+  left: 2%;
+  color: white;
+  font-size: 1.3rem;
+}
+
+@media (min-width: 1024px) {
+  .ad {
+    min-width: 55rem;
+    flex-direction: row;
+  }
+  .electronics {
+    min-width: 25rem;
+    min-height: 25rem;
+  }
+  .mergedsections {
+    flex-direction: column;
+  }
+  .mergedsections div {
+    min-width: 12.3rem;
+    min-height: 12.3rem;
+  }
+  .decoration {
+    position: relative;
+    display: block;
+    min-height: 22rem;
+    min-width: 13rem;
+  }
+  .decoration img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+  }
+  .decoration span {
+    position: absolute;
+    bottom: 0;
+    left: 2%;
+    color: white;
+    font-size: 1.4rem;
+  }
+}
+@media (min-width: 900px) and (max-width: 1024px) {
+  .ad {
+    min-width: 30rem;
+    flex-direction: row;
+  }
+  .electronics {
+    min-width: 25rem;
+    min-height: 25rem;
+  }
+  .mergedsections {
+    flex-direction: column;
+  }
+  .mergedsections div {
+    min-width: 12.3rem;
+    min-height: 12.3rem;
+  }
+}
+@media (min-width: 700px) and (max-width: 900px) {
+  .ad {
+    min-width: 30rem;
+    flex-direction: row;
+  }
+  .electronics {
+    min-width: 22rem;
+    min-height: 22rem;
+  }
+  .mergedsections {
+    flex-direction: column;
+  }
+  .mergedsections div {
+    min-width: 10.77rem;
+    min-height: 10.77rem;
+  }
 }

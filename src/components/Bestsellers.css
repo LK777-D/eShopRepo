@@ -1,11 +1,22 @@
 .bestsellerwrapper {
   position: relative;
+  margin: 2rem 0;
+  text-align: center;
+  padding: 2rem 0;
 }
+.percent {
+  color: rgb(238, 26, 26);
+}
+
 .bestseller {
   display: flex;
   gap: 1rem;
   align-items: center;
   overflow: auto;
+  padding: 1rem 1.7rem;
+}
+.bestseller h2 {
+  text-align: center;
 }
 .sliderbtnleft {
   background: none;
@@ -19,4 +30,10 @@
   position: absolute;
   top: 50%;
   right: 0;
+}
+
+@media (min-width: 900px) {
+  .discountheading {
+    font-size: 2.1rem;
+  }
 }

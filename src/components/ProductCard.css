@@ -2,7 +2,7 @@
   margin: 0 auto;
   background-color: white;
   border-radius: 10px;
-  max-width: 11rem;
+  min-width: 11rem;
   height: 15.5rem;
   gap: 0.5rem;
   display: flex;

@@ -6,6 +6,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
 }
 .heading {
   font-size: 1.24rem;
@@ -21,7 +22,7 @@
 .headerimg {
   min-height: 50vh;
   width: 100%;
-  background-image: url("../assets/laptopheader.jpg");
+  background-image: url("../assets/hero2.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: left;

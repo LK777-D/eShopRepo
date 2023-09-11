@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Oxygen&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Prompt:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200&display=swap");
 .font1 {
   font-family: "Titillium Web", sans-serif;
 }
@@ -14,6 +15,9 @@
 .font4 {
   font-family: "Prompt", sans-serif;
 }
+.font5 {
+  font-family: "Manrope", sans-serif;
+}
 
 #root {
   /* max-width: 1280px; */
@@ -22,7 +26,14 @@
   height: auto;
   margin: 0;
   padding: 0;
+  background-color: white;
 }
 .discount {
   border: 1px solid gray;
+}
+.borderhover {
+  border: 1px solid rgb(0, 0, 0, 0.6);
+}
+.borderhover:hover {
+  border: 1px solid rgb(0, 0, 0, 0.99);
 }

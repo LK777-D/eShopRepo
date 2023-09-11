@@ -1,54 +1,52 @@
 import "./Bestsellers.css";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import { useState, useRef } from "react";
 import ProductCard from "./ProductCard";
 /* eslint-disable react/prop-types */
 
-import Slider from "react-slick";
-
 const Bestseller = (props) => {
+  const scrollContainerRef = useRef(null);
+
+  const [scrolling, setScrolling] = useState(false);
+  const [startX, setStartX] = useState(null);
+  const [scrollLeft, setScrollLeft] = useState(0);
+
   const DiscountedProds = props.prods.filter(
-    (product) => product.discountPercentage > 10
+    (product) => product.discountPercentage > 12
   );
-  const settings = {
-    dots: true,
-    infinite: false,
-    speed: 500,
-    slidesToShow: 4,
-    slidesToScroll: 4,
-    initialSlide: 0,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
-          infinite: true,
-          dots: true,
-        },
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          initialSlide: 2,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-        },
-      },
-    ],
+
+  const handleMouseDown = (e) => {
+    setScrolling(true);
+    setStartX(e.pageX - scrollContainerRef.current.offsetLeft);
+    setScrollLeft(scrollContainerRef.current.scrollLeft);
   };
+
+  const handleMouseMove = (e) => {
+    if (!scrolling) return;
+    e.preventDefault();
+    const x = e.pageX - scrollContainerRef.current.offsetLeft;
+    const walk = (x - startX) * 2;
+    scrollContainerRef.current.scrollLeft = scrollLeft - walk;
+  };
+
+  const handleMouseUp = () => {
+    setScrolling(false);
+  };
+
   return (
     <>
-      <h2>Top Bestsellers Of The 2023</h2>
       <div className="bestsellerwrapper">
-        <Slider {...settings}>
+        <h2 className="font4 discountheading">
+          Hot Sales ! <span className="percent">Up To 12%</span>
+        </h2>
+        <div className="productsdivide"></div>
+        <div
+          className="bestseller"
+          ref={scrollContainerRef}
+          onMouseDown={handleMouseDown}
+          onMouseMove={handleMouseMove}
+          onMouseUp={handleMouseUp}
+          onMouseLeave={handleMouseUp}
+        >
           {DiscountedProds.map((item) => (
             <ProductCard
               key={item.id}
@@ -65,7 +63,7 @@ const Bestseller = (props) => {
               rating={item.rating}
             />
           ))}
-        </Slider>
+        </div>
       </div>
     </>
   );
