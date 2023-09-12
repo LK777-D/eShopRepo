@@ -1,11 +1,22 @@
+.backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(66, 65, 65, 0.3);
+  z-index: 1;
+}
 .shopcart {
-  background-color: #ebe9e9;
+  background-color: #fff;
+  font-family: "Paytone One", sans-serif !important;
+  font-weight: bolder;
   position: fixed;
-  top: 11.2%;
+  top: 0;
   right: 0;
-  width: 19rem;
+  width: 21rem;
   z-index: 100000000000000000000;
-  max-height: 80vh;
+  height: 100vh;
   scroll-behavior: smooth;
   /* height: auto; */
   /* overflow: scroll; */
@@ -58,9 +69,24 @@
 }
 .total span {
   font-weight: bolder;
+  font-size: 1.4rem;
 }
 .animate {
   animation: cartappear 0.3s forwards;
+}
+.itemsincart {
+  min-height: 55vh;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  overflow: scroll;
+}
+
+.cartseperator {
+  width: 90%;
+  margin: 0 auto;
+  background-color: rgb(0, 0, 0, 0.5);
+  height: 1px;
 }
 @keyframes cartappear {
   from {

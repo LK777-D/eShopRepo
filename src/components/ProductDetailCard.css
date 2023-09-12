@@ -22,7 +22,7 @@
   font-size: 1.5rem;
 }
 .imgcont {
-  width: 90%;
+  width: 80%;
   text-align: center;
   margin: 0 auto;
   margin-top: 1rem;
@@ -51,23 +51,12 @@
 
 .buttons {
   display: flex;
-  gap: 1rem;
-  text-align: center;
   align-items: center;
   justify-content: center;
+  gap: 0.5rem;
 }
-.buttons button {
-  padding: 1rem 2.5rem;
-  background: none;
-  border: 1px solid black;
-  border-radius: 25px;
-  color: black;
-  font-family: inherit;
-  font-weight: bolder;
-}
+
 .buttons button:hover {
-  color: white;
-  background-color: black;
 }
 
 .buttons button:hover a {
@@ -88,5 +77,8 @@
     justify-content: center;
     align-items: center;
     margin: 0 auto;
+  }
+  .imgcont img {
+    width: 70%;
   }
 }

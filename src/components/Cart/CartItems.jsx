@@ -7,28 +7,22 @@ const CartItems = (props) => {
   return (
     <>
       {props.prods.map((product) => (
-        <div key={product.id} className="singlecartprod">
-          <div className="prodtitle">{product.title}</div>
-          <div className="infoimgwrapper">
-            <button onClick={() => props.onRemove(product)}>
+        <div key={product.id} className="itemwrapper">
+          <div className="cartimg">
+            <img src={product.images[0]} />
+          </div>
+          <div className="info">
+            <span className="prodname font8">{product.title}</span>
+            <span className="quantity">Amount : {product.quantity}</span>
+          </div>
+          <div className="rightdiv">
+            <span>{product.price}$</span>
+            <button
+              className="removebtn"
+              onClick={() => props.onRemove(product)}
+            >
               <FontAwesomeIcon icon={faRemove} />
             </button>
-            <div className="cartimage">
-              <img src={product.images[1]} />
-            </div>
-
-            <div className="info">
-              <div>
-                <span>Brand:</span>
-                {product.brand}
-              </div>
-              <div>
-                <span>Price:</span>${product.price}
-              </div>
-            </div>
-            <div>
-              <span>x{product.quantity}</span>
-            </div>
           </div>
         </div>
       ))}

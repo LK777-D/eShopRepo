@@ -40,6 +40,16 @@
 
   background-color: rgb(211, 211, 211, 0.7);
 }
+.categories {
+  display: flex;
+  overflow: auto;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 2rem 0;
+  padding: 0.3rem 0;
+}
+
 @media (min-width: 1400px) {
   .productscont {
     grid-template-columns: repeat(7, 1fr);

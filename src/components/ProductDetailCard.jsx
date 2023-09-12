@@ -1,3 +1,4 @@
+import Button from "../UI/Button";
 import "./ProductDetailCard.css";
 import { Link } from "react-router-dom";
 /* eslint-disable react/prop-types */
@@ -30,10 +31,8 @@ const ProductDetailCard = (props) => {
           </div>
         </div>
         <div className="buttons">
-          <button>
-            <Link to="/">Cancel</Link>
-          </button>
-          <button>Order Now</button>
+          <Button className="font4">Cancel</Button>
+          <Button className="font4">Order Now</Button>
         </div>
       </div>
     </div>

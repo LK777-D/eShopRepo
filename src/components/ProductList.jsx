@@ -66,7 +66,7 @@ const ProductList = (props) => {
 
   return (
     <>
-      <Bestseller prods={bestseller} />
+      <Bestseller prods={bestseller} onAdd={addToCartHandler} />
       <div className="seperator"></div>
       <OrderHelper />
       <Cart

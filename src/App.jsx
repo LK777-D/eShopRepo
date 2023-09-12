@@ -5,9 +5,10 @@ import { Routes, Route } from "react-router-dom";
 import { useState } from "react";
 import Home from "./pages/Home";
 import Navbar from "./components/Navbar";
-import SecondaryNav from "./components/SecondaryNav";
+// import SecondaryNav from "./components/SecondaryNav";
 import ProductDetail from "./pages/ProductDetail";
 import Footer from "./components/Footer";
+import Products from "./pages/Products";
 
 function App() {
   const [cartIsOpen, setCartIsOpen] = useState(false);
@@ -23,12 +24,14 @@ function App() {
     //   document.body.style.overflow = "visible";
     // }
   };
+
   return (
     <>
       <Navbar
         onOpen={openCartHandler}
         amount={amount}
         scale={scaleAfterClick}
+        searchData={searchData}
       />
       {/* <SecondaryNav searchData={searchData} /> */}
 
@@ -53,6 +56,10 @@ function App() {
         <Route
           path="/productdetail/:productId"
           element={<ProductDetail products={searchData} />}
+        />
+        <Route
+          path="/products"
+          element={<Products searchData={searchData} />}
         />
       </Routes>
       <footer>

@@ -16,9 +16,7 @@ const ProductDetail = (props) => {
   };
   // console.log(props.products);
   const detailedProduct = productDetailOpen(productId);
-  console.log("props.products:", props.products);
-  console.log("productId:", productId);
-  console.log("detailedProduct:", detailedProduct);
+
   if (!detailedProduct) {
     return <div>Loading...</div>;
   }

@@ -6,6 +6,7 @@ import { NavLink } from "react-router-dom";
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faRemove } from "@fortawesome/free-solid-svg-icons";
+import SecondaryNav from "./SecondaryNav";
 /* eslint-disable react/prop-types */
 
 const Navbar = (props) => {
@@ -58,6 +59,7 @@ const Navbar = (props) => {
           <span className="mainlogo">MultiMart</span>
         </Link>
       </div>
+
       <div className="cart">
         <div className="shoppingcart">
           {/* <UilUserCircle size="40" color="#424546" className="icon" /> */}
