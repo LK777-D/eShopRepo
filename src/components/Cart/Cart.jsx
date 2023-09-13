@@ -24,9 +24,7 @@ const Cart = (props) => {
               <FontAwesomeIcon icon={faChevronRight} />
             </button>
             <div className="carttext">
-              <h3>
-                Your Shopping Cart <FontAwesomeIcon icon={faShoppingCart} />
-              </h3>
+              <h4>Your Shopping Cart </h4>
             </div>
             <div className="itemsincart">
               <CartItems

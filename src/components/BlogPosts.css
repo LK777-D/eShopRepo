@@ -1,0 +1,54 @@
+/* BlogPage.css */
+
+.blog-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+.blog-page h2 {
+  font-size: 1.7rem;
+}
+
+.blog-posts {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.blog-post {
+  background-color: rgb(247, 247, 247, 0.5);
+  border: 1px solid #ddd;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  transition: all 0.4s ease;
+  cursor: pointer;
+}
+.blog-post:hover {
+  border: 1px solid #424141;
+}
+
+.blog-posts img {
+  max-width: 100%;
+  height: 40%;
+}
+.bloglink {
+  text-decoration: none;
+  color: rgb(194, 191, 191);
+  background-color: rgb(22, 22, 22);
+  padding: 0.5rem 1rem;
+  transition: all 0.3s ease;
+}
+.bloglink:hover {
+  color: white;
+  background-color: black;
+}
+
+@media (max-width: 600px) {
+  .blog-posts {
+    display: flex;
+    flex-direction: column;
+  }
+}

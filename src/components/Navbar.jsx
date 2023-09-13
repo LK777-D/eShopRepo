@@ -1,12 +1,12 @@
 import "./Navbar.css";
 import { UilShoppingBag } from "@iconscout/react-unicons";
 import { Link } from "react-router-dom";
+import { Link as LinkScroll } from "react-scroll";
 // import { UilUserCircle } from "@iconscout/react-unicons";
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faRemove } from "@fortawesome/free-solid-svg-icons";
-import SecondaryNav from "./SecondaryNav";
+import { UilSignin } from "@iconscout/react-unicons";
+
 /* eslint-disable react/prop-types */
 
 const Navbar = (props) => {
@@ -29,30 +29,37 @@ const Navbar = (props) => {
         <div className="menustick"></div>
       </div>
       {openDrop && (
-        <div className="sidemenu">
-          <div className="menuheading">
-            <button onClick={handleDrop}>
-              <FontAwesomeIcon icon={faRemove} />
-            </button>
-            <h2>Browse Global Shop</h2>
+        <>
+          <div className="backdrop" onClick={handleDrop}></div>
+          <div className="sidemenu">
+            <h2 className="logoside font4">MultiMart</h2>
+            <div className="sidemenuseperator"></div>
+            <div className="websitenav font4">
+              <h2>Navigation</h2>
+              <div className="sidemenuseperator"></div>
+              <Link>Home</Link>
+              <Link>Sales</Link>
+              <Link>Blog</Link>
+              <Link>Contact</Link>
+            </div>
+            <div className="sidenavlogin font4">
+              {!props.user ? (
+                <Link
+                  to="/authentication"
+                  onClick={handleDrop}
+                  className="font4"
+                >
+                  Log In
+                </Link>
+              ) : (
+                <Link onClick={props.logOut} to="/authentication">
+                  Log Out
+                </Link>
+              )}
+              <UilSignin size="35" className="iconlogin" />
+            </div>
           </div>
-          <div className="bestsellers">
-            <h2>Top Bestseller Brands</h2>
-            <Link to="/productdetail/2">Apple</Link>
-            <Link to="/productdetail/3">Samsung</Link>
-            <Link to="/productdetail/5">Xiaomi</Link>
-          </div>
-          <div className="seperator"></div>
-          <div className="otherproducts">
-            <h2>Explore Other Products</h2>
-            <Link to="/productdetail/7">Electronics</Link>
-            <Link to="/productdetail/19">Food and Ingridients</Link>
-            <Link to="/productdetail/15">Home Furnishing Materials</Link>
-            <Link to="/productdetail/10">Clothing And Accesories</Link>
-            <Link to="/productdetail/7">Furniture</Link>
-            <Link to="/productdetail/8">Building Materials</Link>
-          </div>
-        </div>
+        </>
       )}
       <div className="brandname">
         <Link to="/" className="company font4 mainlogo">
@@ -61,6 +68,7 @@ const Navbar = (props) => {
       </div>
 
       <div className="cart">
+        <span>{props.user?.email}</span>
         <div className="shoppingcart">
           {/* <UilUserCircle size="40" color="#424546" className="icon" /> */}
           <UilShoppingBag
@@ -74,21 +82,32 @@ const Navbar = (props) => {
             {props.amount}
           </span>
         </div>
+        <div>
+          {!props.user ? (
+            <Link to="authentication" className="font4">
+              Log In
+            </Link>
+          ) : (
+            <Link onClick={props.logOut} to="/authentication">
+              Log Out
+            </Link>
+          )}
+        </div>
       </div>
 
       <div className="lgmenu font2">
         <NavLink to="/" className="lgmenulink">
           Home
         </NavLink>
-        <NavLink className="lgmenulink" to="/productdetail/17">
-          Products
+        <LinkScroll className="lgmenulink" to="sales">
+          Sales
+        </LinkScroll>
+        <NavLink className="lgmenulink" to="/blog">
+          Blog
         </NavLink>
-        <NavLink className="lgmenulink" to="/productdetail/14">
-          Bestsellers
-        </NavLink>
-        <NavLink className="lgmenulink" to="/productdetail/14">
+        <LinkScroll className="lgmenulink" to="/productdetail/14">
           Contact
-        </NavLink>
+        </LinkScroll>
       </div>
     </nav>
   );

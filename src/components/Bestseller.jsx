@@ -34,7 +34,7 @@ const Bestseller = (props) => {
 
   return (
     <>
-      <div className="bestsellerwrapper">
+      <div className="bestsellerwrapper" id="sales">
         <h2 className="font4 discountheading">
           Hot Sales ! <span className="percent">Up To 12%</span>
         </h2>
