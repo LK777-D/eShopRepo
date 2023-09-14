@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import "./ProductList.css";
 import { useState, useEffect } from "react";
-
+import { useNavigate } from "react-router-dom";
 import AllProducts from "./AllProducts";
 import Bestseller from "./Bestseller";
 import OrderHelper from "./OrderHelper";
@@ -63,7 +63,18 @@ const ProductList = (props) => {
     console.log("hello");
     props.setAmount((prevAmount) => prevAmount - 1 * product.quantity);
   };
-
+  const navigate = useNavigate();
+  const orderHandler = () => {
+    if (props.user) {
+      setCartItems([]);
+      props.setAmount(0);
+      setTotal(0);
+      props.setCartIsOpen(false);
+    } else {
+      navigate("/authentication");
+      props.setCartIsOpen(false);
+    }
+  };
   return (
     <>
       <Bestseller prods={bestseller} onAdd={addToCartHandler} />
@@ -75,6 +86,8 @@ const ProductList = (props) => {
         onRemove={removeFromCartHandler}
         cartIsOpen={props.cartIsOpen}
         onOpen={props.onOpen}
+        amount={props.amount}
+        orderHandler={orderHandler}
       />
       <div className="seperator"></div>
       <AllProducts prods={prods} onAdd={addToCartHandler} />

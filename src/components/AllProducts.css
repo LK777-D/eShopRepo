@@ -44,7 +44,6 @@
   display: flex;
   overflow: auto;
   align-items: center;
-  justify-content: center;
   gap: 0.5rem;
   margin: 2rem 0;
   padding: 0.3rem 0;
@@ -75,5 +74,10 @@
 @media (min-width: 600px) and (max-width: 800px) {
   .productscont {
     grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (min-width: 500px) {
+  .categories {
+    justify-content: center;
   }
 }

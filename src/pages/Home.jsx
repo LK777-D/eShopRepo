@@ -2,7 +2,7 @@ import "./Home.css";
 /* eslint-disable react/prop-types */
 import Header from "../components/Header";
 import ProductList from "../components/ProductList";
-import CategoryShowCase from "../components/CategoryShowcase";
+
 import Coupon from "../components/Coupon";
 import Advertisement from "../UI/Advertisement";
 
@@ -25,6 +25,9 @@ const Home = (props) => {
           setAmount={props.setAmount}
           setSearchData={props.setSearchData}
           setScale={props.setScale}
+          amount={props.amount}
+          user={props.user}
+          setCartIsOpen={props.setCartIsOpen}
         />
       </main>
     </>

@@ -1,43 +1,28 @@
 import "./Footer.css";
+import ButtonPrimary from "../UI/ButtonPrimary";
+import { Link } from "react-scroll";
 
 const Footer = () => {
   return (
-    <footer className="footer">
-      <div className="footer-content">
-        <div className="footer-column">
-          <h3>Company</h3>
-          <ul>
-            <li>About Us</li>
-            <li>Contact Us</li>
-            <li>Terms of Service</li>
-            <li>Privacy Policy</li>
-          </ul>
-        </div>
-        <div className="footer-column">
-          <h3>Products</h3>
-          <ul>
-            <li>Electronics</li>
-            <li>Fashion</li>
-            <li>Home & Garden</li>
-            <li>Fashion</li>
-            <li>Motors</li>
-            {/* Add more product links */}
-          </ul>
-        </div>
-        <div className="footer-column">
-          <h3>Support</h3>
-          <ul>
-            <li>FAQ</li>
-            <li>Shipping</li>
-            <li>Returns</li>
-          </ul>
+    <footer className="footer font4" id="footer">
+      <div className="newsletterwrapper">
+        <h4>MultiMart Newsletter</h4>
+        <div className="subscribe">
+          <input type="text" placeholder="example@email.com" />
+          <ButtonPrimary>Subscire</ButtonPrimary>
         </div>
       </div>
-      <div className="footer-bottom">
-        <p>
-          &copy; {new Date().getFullYear()} Global Shop Store. All rights
-          reserved.
-        </p>
+      <div className="font8 footernav">
+        <Link to="header" smooth={true}>
+          Home
+        </Link>
+        <Link to="sales" smooth={true}>
+          Sales
+        </Link>
+        <Link to="/blog">Blog</Link>
+      </div>
+      <div>
+        <p className="font8">© MultiMart. 2023 All Rights Reserved.</p>
       </div>
     </footer>
   );

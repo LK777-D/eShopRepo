@@ -1,9 +1,13 @@
 import Button from "../UI/Button";
 import "./ProductDetailCard.css";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 /* eslint-disable react/prop-types */
 
 const ProductDetailCard = (props) => {
+  const navigate = useNavigate();
+  const navigateBack = () => {
+    navigate(-1);
+  };
   return (
     <div className="detailscard font4">
       <div className="cardcontent ">
@@ -30,9 +34,13 @@ const ProductDetailCard = (props) => {
             </span>
           </div>
         </div>
-        <div className="buttons">
-          <Button className="font4">Cancel</Button>
-          <Button className="font4">Order Now</Button>
+        <div className="buttons ">
+          <Button onClick={navigateBack} className="font4">
+            Cancel
+          </Button>
+          <Button onClick={props.onClick} className="font4">
+            Add To Cart
+          </Button>
         </div>
       </div>
     </div>

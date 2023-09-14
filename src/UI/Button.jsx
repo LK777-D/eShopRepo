@@ -2,7 +2,9 @@ import "./Button.css";
 const Button = (props) => {
   return (
     <>
-      <button className="btnsecondary font4">{props.children}</button>
+      <button onClick={props.onClick} className="btnsecondary font8">
+        {props.children}
+      </button>
     </>
   );
 };

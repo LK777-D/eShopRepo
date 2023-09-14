@@ -3,7 +3,8 @@
   flex-direction: column;
   text-align: center;
   gap: 1.4rem;
-  padding: 2rem 0;
+  padding: 2rem 2rem;
+
   margin: 2rem 0;
 }
 .helperheading {

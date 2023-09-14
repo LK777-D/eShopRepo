@@ -1,5 +1,6 @@
 import "./Coupon.css";
 import { useState } from "react";
+import ButtonPrimary from "../UI/ButtonPrimary";
 
 const Coupon = () => {
   const [coupon, setCoupon] = useState("");
@@ -26,15 +27,15 @@ const Coupon = () => {
         </h3>
 
         <div className="couponbtn ">
-          <button
+          <ButtonPrimary
             className="font5 borderhover "
             onClick={couponGeneratorHandler}
           >
             Generate Coupon
-          </button>
+          </ButtonPrimary>
         </div>
-        <div className="generatedcoupon">
-          {coupon.length > 1 && <span>Your Coupon : {coupon}</span>}
+        <div className={`generatedcoupon font4 ${coupon ? "show" : ""}`}>
+          {coupon && <span>Your Coupon : {coupon}</span>}
         </div>
       </div>
       <div className="productsdivide"></div>

@@ -42,7 +42,8 @@ const Navbar = (props) => {
               <Link>Blog</Link>
               <Link>Contact</Link>
             </div>
-            <div className="sidenavlogin font4">
+
+            <div className="sidenavlogin font8">
               {!props.user ? (
                 <Link
                   to="/authentication"
@@ -58,6 +59,9 @@ const Navbar = (props) => {
               )}
               <UilSignin size="35" className="iconlogin" />
             </div>
+            <div className="sideuser">
+              <span className="font8">({props.user?.email})</span>
+            </div>
           </div>
         </>
       )}
@@ -68,7 +72,7 @@ const Navbar = (props) => {
       </div>
 
       <div className="cart">
-        <span>{props.user?.email}</span>
+        <span className="user">{props.user?.email}</span>
         <div className="shoppingcart">
           {/* <UilUserCircle size="40" color="#424546" className="icon" /> */}
           <UilShoppingBag
@@ -82,7 +86,7 @@ const Navbar = (props) => {
             {props.amount}
           </span>
         </div>
-        <div>
+        <div className="log">
           {!props.user ? (
             <Link to="authentication" className="font4">
               Log In
@@ -99,13 +103,13 @@ const Navbar = (props) => {
         <NavLink to="/" className="lgmenulink">
           Home
         </NavLink>
-        <LinkScroll className="lgmenulink" to="sales">
+        <LinkScroll className="lgmenulink" to="sales" smooth={true}>
           Sales
         </LinkScroll>
         <NavLink className="lgmenulink" to="/blog">
           Blog
         </NavLink>
-        <LinkScroll className="lgmenulink" to="/productdetail/14">
+        <LinkScroll className="lgmenulink" to="footer" smooth={true}>
           Contact
         </LinkScroll>
       </div>

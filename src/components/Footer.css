@@ -1,50 +1,41 @@
 .footer {
-  background-color: #272626;
-  padding: 20px;
+  background-color: black;
+  min-height: 20rem;
+  width: 100%;
   color: white;
-  font-family: inherit;
-}
-
-.footer-content {
+  letter-spacing: 0.2rem;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
   text-align: center;
 }
-
-.footer-column {
-  flex: 1;
-  padding: 10px;
+.footer button {
+  color: white;
+  border: 2px solid white;
 }
-
-.footer-column h3 {
+.footer input {
+  padding: 0.7rem 2rem;
+  background-color: rgba(241, 237, 237, 0.9);
+}
+.subscribe {
+  display: flex;
+  gap: 0.4rem;
+}
+.newsletterwrapper {
+  text-align: center;
+}
+.footernav {
+  display: flex;
+  gap: 0.4rem;
+}
+.footernav a {
+  transition: all 0.4s ease;
   font-size: 1.2rem;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-.footer-column ul {
-  list-style: none;
-  padding: 0;
-}
-
-.footer-column li {
-  margin-bottom: 5px;
-}
-.footer li:hover {
-  color: rgb(218, 215, 215);
   cursor: pointer;
 }
 
-.footer-bottom {
-  text-align: center;
-  padding-top: 10px;
-  border-top: 1px solid #ccc;
-  margin-top: 20px;
-}
-
-/* Mobile-first responsiveness */
-@media screen and (max-width: 767px) {
-  .footer-column {
-    flex: 100%;
-    text-align: center;
-  }
+.footernav a:hover {
+  color: lightgray;
 }

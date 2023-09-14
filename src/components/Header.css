@@ -12,6 +12,9 @@
   font-size: 1.24rem;
   color: rgb(43, 38, 38);
   font-weight: bolder;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .heading h3 {
   color: #ffffff;

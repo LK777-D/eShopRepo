@@ -1,10 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./Cart.css";
 import CartItems from "./CartItems";
-import {
-  faShoppingCart,
-  faChevronRight,
-} from "@fortawesome/free-solid-svg-icons";
+import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import ButtonPrimary from "../../UI/ButtonPrimary";
 /* eslint-disable react/prop-types */
 
@@ -24,7 +21,7 @@ const Cart = (props) => {
               <FontAwesomeIcon icon={faChevronRight} />
             </button>
             <div className="carttext">
-              <h4>Your Shopping Cart </h4>
+              <h4>Your Shopping Cart ({props.amount}) </h4>
             </div>
             <div className="itemsincart">
               <CartItems
@@ -40,7 +37,7 @@ const Cart = (props) => {
             </div>
             <div className="cartbuttons">
               <ButtonPrimary onClick={props.onOpen}>Close</ButtonPrimary>
-              <ButtonPrimary>Order</ButtonPrimary>
+              <ButtonPrimary onClick={props.orderHandler}>Order</ButtonPrimary>
             </div>
           </div>
         </>

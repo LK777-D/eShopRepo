@@ -61,7 +61,6 @@ function App() {
     } catch (err) {
       console.log(err);
     }
-    navigate("/");
   };
   const logIn = async () => {
     try {
@@ -74,12 +73,16 @@ function App() {
     } catch (err) {
       console.log(err);
     }
-    navigate("/");
   };
   const logOut = async () => {
     await signOut(auth);
     navigate("/authentication");
   };
+  useEffect(() => {
+    if (user?.email) {
+      navigate("/");
+    }
+  }, [user]);
 
   return (
     <>
@@ -108,6 +111,9 @@ function App() {
               cartIsOpen={cartIsOpen}
               openCartHandler={openCartHandler}
               setScale={setScaleAfterClick}
+              amount={amount}
+              user={user}
+              setCartIsOpen={setCartIsOpen}
             />
           }
         />

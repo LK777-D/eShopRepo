@@ -12,45 +12,35 @@
 
   color: white;
   font-weight: bolder;
-  animation: couponSlide 1.5s ease-in-out;
 }
 .generatedcoupon {
   text-align: left;
 }
+.transition {
+  transition: 0.5s ease;
+  transform: translateX(0%);
+}
+
 .couponbtn {
   text-align: center;
   margin-bottom: 1.5rem;
 }
 .coupon button {
-  background: none;
-  border: none;
-  color: black;
-  border: 1px solid hwb(0 0% 100%);
+  padding: 1rem 3rem;
+}
+.generatedcoupon {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
 
-  min-width: 15rem;
-  min-height: 3rem;
-  border-radius: 3px;
+.generatedcoupon.show {
+  opacity: 1;
+  transform: translateY(0);
+}
 
-  font-weight: bolder;
-  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-}
-.coupon button:hover {
-  background-color: black;
-  color: white;
-}
-@keyframes couponSlide {
-  from {
-    transform: translateX(0%);
-  }
-  to {
-    transform: translateX(100%);
-  }
-}
 @media (min-width: 600px) {
   .coupon {
     text-align: center;
-  }
-  .coupon span {
-    border-radius: 10px;
   }
 }

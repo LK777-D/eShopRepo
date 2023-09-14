@@ -23,7 +23,7 @@ const Auth = (props) => {
             <input
               placeholder="example@gmail.com"
               type="email"
-              onChange={(e) => props.setLoginEmail(e.target.value)}
+              onChange={(e) => props.setLogInEmail(e.target.value)}
             />
             <UilEnvelope className="inputicon" />
           </div>
@@ -34,7 +34,7 @@ const Auth = (props) => {
             <input
               placeholder="Password"
               type="password"
-              onChange={(e) => props.setLoginPassword(e.target.value)}
+              onChange={(e) => props.setLogInPassword(e.target.value)}
             />
             <UilLock className="inputicon" />
           </div>
