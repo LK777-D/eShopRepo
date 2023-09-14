@@ -12,13 +12,13 @@ import { UilSignin } from "@iconscout/react-unicons";
 const Navbar = (props) => {
   const [openDrop, setOpenDrop] = useState(false);
 
+  if (openDrop) {
+    document.body.style.overflow = "hidden";
+  } else {
+    document.body.style.overflow = "visible";
+  }
   const handleDrop = () => {
     setOpenDrop(!openDrop);
-    if (!openDrop) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "visible";
-    }
   };
 
   return (
@@ -31,16 +31,36 @@ const Navbar = (props) => {
       {openDrop && (
         <>
           <div className="backdrop" onClick={handleDrop}></div>
-          <div className="sidemenu">
+          <div className={`sidemenu ${openDrop ? "slide" : ""} `}>
             <h2 className="logoside font4">MultiMart</h2>
             <div className="sidemenuseperator"></div>
             <div className="websitenav font4">
               <h2>Navigation</h2>
               <div className="sidemenuseperator"></div>
-              <Link>Home</Link>
-              <Link>Sales</Link>
-              <Link>Blog</Link>
-              <Link>Contact</Link>
+              <LinkScroll
+                onClick={() => setOpenDrop(!openDrop)}
+                to="header"
+                smooth={true}
+              >
+                Home
+              </LinkScroll>
+              <LinkScroll
+                onClick={() => setOpenDrop(!openDrop)}
+                to="sales"
+                smooth={true}
+              >
+                Sales
+              </LinkScroll>
+              <Link onClick={() => setOpenDrop(!openDrop)} to="blog">
+                Blog
+              </Link>
+              <LinkScroll
+                onClick={() => setOpenDrop(!openDrop)}
+                to="footer"
+                smooth={true}
+              >
+                Contact
+              </LinkScroll>
             </div>
 
             <div className="sidenavlogin font8">

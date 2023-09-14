@@ -67,7 +67,7 @@
   right: -3%;
   height: 8rem;
   height: auto;
-  width: 18rem;
+  min-width: 18rem;
   width: auto;
   border-radius: 15px;
   background-color: white;
