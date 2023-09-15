@@ -5,7 +5,6 @@ import {
   faCreditCard,
   faHome,
   faLaptop,
-  //   faShoppingCart,
 } from "@fortawesome/free-solid-svg-icons";
 
 const OrderHelper = () => {

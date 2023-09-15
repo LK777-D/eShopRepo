@@ -18,7 +18,7 @@
 .showmore button {
   border: none;
   padding: 0.3rem;
-  /* border-bottom: 1px solid rgb(40, 40, 40); */
+
   transition: background-color 0.4s ease-in-out;
   font-weight: bolder;
   background: transparent;

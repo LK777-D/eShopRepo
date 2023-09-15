@@ -45,7 +45,6 @@ const ProductList = (props) => {
       );
       setCartItems(updatedCart);
     } else {
-      // Product doesn't exist in the cart, add it with quantity 1
       const productWithQuantity = { ...product, quantity: 1 };
       setCartItems((prevItems) => [...prevItems, productWithQuantity]);
     }

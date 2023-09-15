@@ -14,6 +14,7 @@ const ProductDetail = (props) => {
       (product) => String(product.id).trim() === String(id).trim()
     );
   };
+
   // console.log(props.products);
   const detailedProduct = productDetailOpen(productId);
 

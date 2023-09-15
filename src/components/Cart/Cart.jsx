@@ -1,5 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./Cart.css";
+
 import CartItems from "./CartItems";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import ButtonPrimary from "../../UI/ButtonPrimary";
@@ -13,35 +14,35 @@ const Cart = (props) => {
   }
   return (
     <>
-      {props.cartIsOpen && (
-        <>
-          <div className="backdrop"></div>
-          <div className={props.cartIsOpen ? "shopcart animate" : "shopcart"}>
-            <button onClick={props.onOpen} className="close">
-              <FontAwesomeIcon icon={faChevronRight} />
-            </button>
-            <div className="carttext">
-              <h4>Your Shopping Cart ({props.amount}) </h4>
-            </div>
-            <div className="itemsincart">
-              <CartItems
-                prods={props.prods}
-                onRemove={props.onRemove}
-                quantity={props.quantity}
-                cartIsOpen={props.cartIsOpen}
-              />
-            </div>
-            <div className="cartseperator"></div>
-            <div className="total">
-              <span>Total:${props.total}</span>
-            </div>
-            <div className="cartbuttons">
-              <ButtonPrimary onClick={props.onOpen}>Close</ButtonPrimary>
-              <ButtonPrimary onClick={props.orderHandler}>Order</ButtonPrimary>
-            </div>
-          </div>
-        </>
-      )}
+      {props.cartIsOpen && <div className="cartbackdrop"></div>}
+      <div
+        className={`shopcart ${
+          props.cartIsOpen ? "cartslidein" : "cartslideout"
+        }`}
+      >
+        <button onClick={props.onOpen} className="close">
+          <FontAwesomeIcon icon={faChevronRight} />
+        </button>
+        <div className="carttext">
+          <h4>Your Shopping Cart ({props.amount}) </h4>
+        </div>
+        <div className="itemsincart">
+          <CartItems
+            prods={props.prods}
+            onRemove={props.onRemove}
+            quantity={props.quantity}
+            cartIsOpen={props.cartIsOpen}
+          />
+        </div>
+        <div className="cartseperator"></div>
+        <div className="total">
+          <span>Total:${props.total}</span>
+        </div>
+        <div className="cartbuttons">
+          <ButtonPrimary onClick={props.onOpen}>Close</ButtonPrimary>
+          <ButtonPrimary onClick={props.orderHandler}>Order</ButtonPrimary>
+        </div>
+      </div>
     </>
   );
 };

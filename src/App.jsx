@@ -43,6 +43,7 @@ function App() {
 
   const openCartHandler = () => {
     setCartIsOpen(!cartIsOpen);
+    navigate("/");
     // if (!cartIsOpen) {
     //   document.body.style.overflow = "hidden";
     // } else {
@@ -94,13 +95,7 @@ function App() {
         user={user}
         logOut={logOut}
       />
-      {/* <SecondaryNav searchData={searchData} /> */}
 
-      {/* <section className="discount">
-        <p>
-          Get <span>50% Discount</span> on Your First Order
-        </p>
-      </section> */}
       <Routes>
         <Route
           path="/"
