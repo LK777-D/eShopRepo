@@ -1,6 +1,7 @@
 .formcontainer {
   display: flex;
   flex-direction: column;
+
   justify-content: center;
   border: 1px solid lightgray;
   padding: 1.8rem;
@@ -11,7 +12,7 @@
 .form {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 1.7rem;
 }
 .labelinput {
   display: flex;
@@ -22,12 +23,24 @@
 ::placeholder {
   font-family: "Prompt", sans-serif;
 }
+.error {
+  position: absolute;
+  bottom: -30%;
+  color: red;
+  left: 3%;
+  font-size: 0.6rem;
+  font-weight: bold;
+  visibility: hidden;
+}
 .labelinput input {
   padding: 0.59rem 2.2rem;
   border: none;
   outline: 1px solid lightgray;
   border-radius: 5px;
   transition: all 0.1s ease;
+}
+.labelinput input:invalid ~ .error {
+  visibility: visible;
 }
 
 .labelinput input:focus {

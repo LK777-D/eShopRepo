@@ -39,7 +39,7 @@ const ProductDetailCard = (props) => {
             Cancel
           </Button>
           <Button onClick={props.onClick} className="font4">
-            Add To Cart
+            Order
           </Button>
         </div>
       </div>

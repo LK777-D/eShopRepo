@@ -21,21 +21,33 @@ const Auth = (props) => {
               E-mail
             </label>
             <input
+              required
               placeholder="example@gmail.com"
+              id="email"
               type="email"
               onChange={(e) => props.setLogInEmail(e.target.value)}
             />
+            {props.logInEmail.length > 0 && (
+              <span className="error font5">not a valid email</span>
+            )}
             <UilEnvelope className="inputicon" />
           </div>
+
           <div className="labelinput">
             <label htmlFor="password" className="font4">
               Password
             </label>
             <input
+              required
               placeholder="Password"
+              id="password"
               type="password"
+              pattern="[a-z0-9]{6,}"
               onChange={(e) => props.setLogInPassword(e.target.value)}
             />
+            {props.logInPassword.length > 0 && (
+              <span className="error font5">Digits or letters,min 6 chars</span>
+            )}
             <UilLock className="inputicon" />
           </div>
           <ButtonPrimary onClick={props.logIn}>Sign In</ButtonPrimary>
@@ -65,6 +77,9 @@ const Auth = (props) => {
               type="email"
               onChange={(e) => props.setRegisterEmail(e.target.value)}
             />
+            {props.registerEmail.length > 0 && (
+              <span className="error font5">not a valid email</span>
+            )}
             <UilEnvelope className="inputicon" />
           </div>
           <div className="labelinput">
@@ -76,6 +91,11 @@ const Auth = (props) => {
               type="password"
               onChange={(e) => props.setRegisterPassword(e.target.value)}
             />
+            {props.registerPassword.length > 0 && (
+              <span className="error font5">
+                Digits and letters,min 6 chars
+              </span>
+            )}
             <UilLock className="inputicon" />
           </div>
           <ButtonPrimary onClick={props.register}>Sign Up</ButtonPrimary>
