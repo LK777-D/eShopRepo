@@ -16,20 +16,30 @@ const ProductList = (props) => {
   const { setSearchData } = props;
   useEffect(() => {
     const fetchProducts = async () => {
-      const url = "https://dummyjson.com/products";
+      try {
+        const url = "https://dummyjson.com/products";
+        const response = await fetch(url);
 
-      const response = await fetch(url);
-      const productsData = await response.json();
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
 
-      if (productsData.products) {
-        setProducts(productsData.products);
-      }
-      if (productsData.products) {
-        setBestseller(productsData.products);
+        const productsData = await response.json();
+
+        if (productsData.products) {
+          setProducts(productsData.products);
+        }
+        if (productsData.products) {
+          setBestseller(productsData.products);
+        }
+      } catch (error) {
+        console.error("Error fetching products:", error);
       }
     };
+
     fetchProducts();
   }, []);
+
   useEffect(() => {
     setSearchData(prods);
   }, [setSearchData, prods]);

@@ -49,31 +49,10 @@
   padding: 0.3rem 0;
 }
 
-@media (min-width: 1400px) {
+@media (min-width: 600px) {
   .productscont {
-    grid-template-columns: repeat(7, 1fr);
-  }
-}
-@media (min-width: 1200px) {
-  .productscont {
-    grid-template-columns: repeat(6, 1fr);
-  }
-}
-
-@media (min-width: 1000px) and (max-width: 1200px) {
-  .productscont {
-    grid-template-columns: repeat(5, 1fr);
-  }
-}
-@media (min-width: 800px) and (max-width: 1000px) {
-  .productscont {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-
-@media (min-width: 600px) and (max-width: 800px) {
-  .productscont {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(11rem, 1fr));
+    gap: 2rem;
   }
 }
 @media (min-width: 500px) {
